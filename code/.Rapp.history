@@ -1,0 +1,319 @@
+class(xx)
+xx
+y <- x[,1:5]%*%rep(1,5) - 2 + rnorm(nrow(x), sd=.1)
+fit <- lm(y~., data.frame(y, as.matrix(xx)))
+fit
+colnames(xx) <- as.character(iss)
+fit <- lm(y~., data.frame(y, as.matrix(xx)))
+fit
+iss[4]
+iss[10]
+iss[15]
+which.rows(iss[15], x)
+res <- rnrom(100)
+res <- rnorm(100)
+tx <- c(rep(0, 50), rep(1, 50))
+tx.rows <- intersect(which.rows(iss[15],x), tx)
+tx.rows <- intersect(which.rows(iss[15],x), which(tx==1))
+ctrl.rows <- intersect(which.rows(iss[15],x), which(tx==0))
+boxplot(res[tx.rows], res[ctrl.rows])
+ctrl.rows
+tx.rows
+x[,c(4,6)]
+tx <- sample(0:1, nrow(x), replace=TRUE)
+tx.rows <- intersect(which.rows(iss[15],x), which(tx==1))
+ctrl.rows <- intersect(which.rows(iss[15],x), which(tx==0))
+boxplot(res[tx.rows], res[ctrl.rows])
+wilcox.testt(res[tx.rows], res[ctrl.rows])
+wilcox.test(res[tx.rows], res[ctrl.rows])
+dars <- darm(x, res, 20)
+dars
+library(krigging)
+library(kriging)
+help kriging
+library(maps)
+help(kriging)
+usa usa <- map("usa", "main", plot = FALSE)
+usa <- map("usa", "main", plot = FALSE)
+usa
+dim(usa)
+p <- list(data.frame(usa$x, usa$y))
+p
+x <- runif(50, min(p[[1]][,1]), max(p[[1]][,1]))
+x
+p
+size(p)
+dim(p)
+Krige random data for a specified area using a list of polygons#
+library(maps)#
+usa <- map("usa", "main", plot = FALSE)#
+p <- list(data.frame(usa$x, usa$y))#
+#
+# Create some random data#
+x <- runif(50, min(p[[1]][,1]), max(p[[1]][,1]))#
+y <- runif(50, min(p[[1]][,2]), max(p[[1]][,2]))#
+z <- rnorm(50)
+Krige and create the map#
+kriged <- kriging(x, y, z, polygons=p, pixels=300)#
+image(kriged, xlim = extendrange(x), ylim = extendrange(y))
+kriged
+summary(krige)
+summary(kriged)
+kriged$model
+krig
+help (krig)
+help (kriging)
+help (map)
+seattle = map('usa.cities')
+seattle = map('us.cities')
+seattle = map(database='us.cities')
+seattle = map(database='usa')
+seattle = map(database='us')
+data(us.cities)
+seattle = map(database='us')
+cities = data(us.cities)
+cities
+seattle = map(database='cities')
+map.cities(us.cities, county='NJ')
+data(us.cities)#
+map.cities(us.cities, country="NJ")
+package(krigging)
+library(krigging)
+library(kriging)
+library(map)
+library(maps)
+map(world)
+map()
+map(canada.cities)
+m = map("state", fill = TRUE, plot = FALSE)
+area.map(m)
+m = map("state", fill = TRUE, plot = FALSE)#
+area.map(m)#
+area.map(m, ".*dakota")#
+area.map(m, c("North Dakota", "South Dakota"))
+map(’france’, fill = TRUE, col = 1:10)
+map('state')
+map('state', region=('oregon'))
+data(us.cities)
+map.cities(us.cities,country='OR')
+map.cities(us.cities,country='Seattle')
+setwd('/Users/thomasbedor/Google Drive/School 13/Pattern Recognition/Crime Project/code')
+d <- read.csv('pd911_main.csv')
+d <- d[,-c(1,2,3)]
+colnames(d) <- c('Disturbances','Arrest','Mental Health','Burglary','Liquor Violations','Traffic Related Calls','Suspicious Circumstances','False Alarms','Trespass','Hazards','Miscellaneous Misdemeanors','Car Prowl','Shoplifting','Reckless Burning','Prostitution','Accident Investigation','Property Damage','Other Property','Auto Thefts','Narcotics Complaints','Prowler','Threats Harassment','Bike','Property  Missing Found','Person Down Injury','Nuisance Mischief','Assaults','Harbor Calls','Persons  Lost Found Missing','Robbery','Weapons Calls','Lewd Conduct','Animal Complaints','Drive By No Injury','Fraud Calls','Failure To Register Sex Offender','Other Vice','Homicide','Vice Calls','Nuisance Mischief ')
+d
+cor_mat <- matrix(nrow = length(d), ncol = length(d))#
+for (i in 1:length(d)){#
+	cor_mat[i,] <- cor(d[,i], d)#
+}
+cor_mat
+co_mean <- mean(cor_mat)
+co_mean
+co_mean <- mean(cor_mat,1)
+co_mean
+co_mean <- apply(cor_mat,1,mean)
+co_mean
+which(co_mean > .6)
+names <- c('Disturbances','Arrest','Mental Health','Burglary','Liquor Violations','Traffic Related Calls','Suspicious Circumstances','False Alarms','Trespass','Hazards','Miscellaneous Misdemeanors','Car Prowl','Shoplifting','Reckless Burning','Prostitution','Accident Investigation','Property Damage','Other Property','Auto Thefts','Narcotics Complaints','Prowler','Threats Harassment','Bike','Property  Missing Found','Person Down Injury','Nuisance Mischief','Assaults','Harbor Calls','Persons  Lost Found Missing','Robbery','Weapons Calls','Lewd Conduct','Animal Complaints','Drive By No Injury','Fraud Calls','Failure To Register Sex Offender','Other Vice','Homicide','Vice Calls','Nuisance Mischief ')
+names(which(co_mean > .6))
+which(co_mean > .6)
+names[which(co_mean > .6)]
+order(co_mean)
+order(co_mean, decreasing=TRUE)
+order(co_mean, decreasing=TRUE)[1..5]
+order(co_mean, decreasing=TRUE)[1..5,]
+order(co_mean, decreasing=TRUE)
+x = order(co_mean, decreasing=TRUE)
+x[c(1:5)]
+x = x[c(1:5)]
+x
+names[x]
+co_mean[x]
+y = order(co_mean)[c(1:5)]
+names(x)
+names[y]
+cor_mat
+order(cov_mat)
+order(cor_mat)
+which(cor_mat == 0)
+which(cor_mat == 1)
+cor_mat[which(cor_mat == 1)]
+x = order(cor_mat, decreasing=TRUE)
+x
+x[1:5]
+order_mat[1:5]
+order_mat[x]
+cor_mat[x]
+x[5]
+cor_mat == 1
+sum(cor_mat == 1)
+cor_mat[,]
+which(cor_mat == 1)
+cor_mat[which(cor_mat == 1)] = 0
+cor_mat
+names <- c('Disturbances','Arrest','Mental Health','Burglary','Liquor Violations','Traffic Related Calls','Suspicious Circumstances','False Alarms','Trespass','Hazards','Miscellaneous Misdemeanors','Car Prowl','Shoplifting','Reckless Burning','Prostitution','Accident Investigation','Property Damage','Other Property','Auto Thefts','Narcotics Complaints','Prowler','Threats Harassment','Bike','Property  Missing Found','Person Down Injury','Nuisance Mischief','Assaults','Harbor Calls','Persons  Lost Found Missing','Robbery','Weapons Calls','Lewd Conduct','Animal Complaints','Drive By No Injury','Fraud Calls','Failure To Register Sex Offender','Other Vice','Homicide','Vice Calls','Nuisance Mischief ')
+d <- read.csv('pd911_main.csv')
+d <- d[,-c(1,2,3)]
+cor_mat <- matrix(nrow = length(d), ncol = length(d))#
+for (i in 1:length(d)){#
+	cor_mat[i,] <- cor(d[,i], d)#
+}
+test = matrix(cor_mat, ncol=1)
+test
+order(test)
+cor_mat2 = matrix(cor_mat, ncol=1)
+asdf = vector(cor_mat)
+cor_mat2[2]
+cor_mat2[which(cor_mat2)==1] = 0
+cor_mat2[which(cor_mat2==1)] = 0
+cor_mat2
+order(cor_mat2)
+colnames(cor_mat) = names#
+rownames(cor_mat ) = names
+cor_mat2 = matrix(cor_mat, ncol=1)
+cor_mat2[which(cor_mat2==1)] = 0
+names(cor_mat2)
+cor_mat[3,5]==cor_mat[5,3]
+cor_mat[1,2]== cor_mat2[3]
+cor_mat[1,2]== cor_mat2[2]
+cor_mat[1,3]== cor_mat2[3]
+cor_mat[1,4]== cor_mat2[3]
+cor_mat[1,4]== cor_mat2[4]
+tops = order(cor_mat2, decreasing=TRUE)
+tops = order(cor_mat2, decreasing=TRUE)[c(1:5)]
+tops
+cor_mat2[42] = cor_mat[1,2]
+cor_mat <- matrix(nrow = length(d), ncol = length(d))#
+for (i in 1:length(d)){#
+	cor_mat[i,] <- cor(d[,i], d)#
+}#
+colnames(cor_mat) = names#
+rownames(cor_mat ) = names#
+cor_mat2 = matrix(cor_mat, ncol=1)#
+cor_mat2[which(cor_mat2==1)] = 0#
+tops = order(cor_mat2, decreasing=TRUE)[c(1:5)]#
+cor_mat2[42] == cor_mat[1,2]
+cor_mat <- matrix(nrow = length(d), ncol = length(d))#
+for (i in 1:length(d)){#
+	cor_mat[i,] <- cor(d[,i], d)#
+}#
+colnames(cor_mat) = names#
+rownames(cor_mat ) = names#
+cor_mat2 = matrix(cor_mat, ncol=1)#
+cor_mat2[which(cor_mat2==1)] = 0#
+tops = order(cor_mat2, decreasing=TRUE)[c(1:5)]#
+cor_mat2[42] == cor_mat[1,3]
+cor_mat2[42] == cor_mat[2,2]
+cor_mat[2,2]
+cor_mat2[which(cor_mat2==1)] = 0
+which(cor_mat2 == 1)
+tops = order(cor_mat2, decreasing=TRUE)[c(1:5)]
+tops
+cor_mat2[42]
+cor_mat2[42]==1
+cor_mat2[42]==1.0
+cor_mat2
+cor_mat2[3]+cor_mat2[4]
+cor_mat2 > 1
+which(cor_mat2 >= 1)
+cor_mat2[83]
+cor_mat2[42]
+cor_mat2[42] = 0
+tops = order(cor_mat2, decreasing=TRUE)[c(1:5)]
+cor_mat2[42] == cor_mat[1,2]
+tops
+cor_mat2[124] == 1
+cor_mat2[124]
+cor_mat2[124]-1 == 0
+cor_mat2 = as.numeric(cor_mat2)
+cor_mat2[124] == 1
+cor_mat2[124]
+cor_mat2[124] =0
+tops = order(cor_mat2, decreasing=TRUE)[c(1:5)]
+cor_mat2[42] == cor_mat[1,2]
+tops
+cor_mat2[329]
+cor_mat2[329] > .99
+cor_mat2[329] > .999999
+cor_mat2[329] > .9999999999999
+cor_mat <- matrix(nrow = length(d), ncol = length(d))#
+for (i in 1:length(d)){#
+	cor_mat[i,] <- cor(d[,i], d)#
+}#
+colnames(cor_mat) = names#
+rownames(cor_mat ) = names#
+cor_mat2 = matrix(cor_mat, ncol=1)#
+cor_mat2[which(cor_mat2>.99999999)] = 0#
+tops = order(cor_mat2, decreasing=TRUE)[c(1:5)]
+tops
+cor_mat2[1,27]
+cor_mat[1,27]
+cor_mat[27]
+names(c(1,27))
+names
+names[c(1,27)]
+cor_mat2[27]
+tops
+1041/40
+1041%40
+1041%%40
+40*26 + 1
+cor_mat[27,1]
+cor_mat2[1041]
+names[c(27,1)]
+for (i in 1:length(cor_mat)){#
+	for (j in 1:length(cor_mat)){#
+		if (i>=j){#
+			cor_mat[i,j]=0#
+		}#
+	}#
+}
+dim_cor_mat
+dim(cor_mat)
+for (i in 1:40{#
+	for (j in 1:40){#
+		if (i>=j){#
+			cor_mat[i,j]=0#
+		}#
+	}#
+}
+for (i in 1:40){#
+	for (j in 1:40){#
+		if (i>=j){#
+			cor_mat[i,j]=0#
+		}#
+	}#
+}
+cor_mat
+colnames(cor_mat) = names#
+rownames(cor_mat ) = names#
+cor_mat2 = matrix(cor_mat, ncol=1)#
+cor_mat2[which(cor_mat2>.99999999)] = 0#
+tops = order(cor_mat2, decreasing=TRUE)[c(1:5)]
+tops
+40*27 + 1
+cor_mat[7,1]
+240/40
+cor_mat[1,7
+]
+cor_mat[241]
+names[c(1,7)]
+tops
+681/40
+cor_mat[18,1]
+cor_mat[1,18]
+cor_mat2[681]
+names[c(1,18)]
+cor_mat2
+cor_mat2[tops]
+tops
+1041/40
+cor_mat[3,27]
+names[c(3,27)]
+cor_mat[5,6]
+246/40
+cor_mat[6,7]
+names[c(6,7)]
+hist3
+help(hist3)
+hist3(c(4,5))
